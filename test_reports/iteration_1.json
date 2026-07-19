@@ -1,0 +1,28 @@
+{
+  "summary": "First-finish smoke: Wolfdynamic public teaser site. Backend (4/4 endpoints incl. validation) and frontend (hero, nav scroll, contact form empty-guard + successful POST 201 + toast + form reset, team names, tagline, info@wolfdynamics.in in Contact + Footer, confidentiality scan) all pass.",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ -> 200 {service:'Wolfdynamic Systems API', status:'ok'}",
+    "GET /api/health -> 200 {status:'healthy', timestamp}",
+    "POST /api/contact valid -> 201 with id + created_at, stored in DB",
+    "POST /api/contact invalid email -> 422",
+    "POST /api/contact missing required (name,message) -> 422",
+    "POST /api/contact invalid interest enum -> 422",
+    "GET /api/contact -> 200, newest-first, includes just-created record",
+    "Home page loads at REACT_APP_BACKEND_URL",
+    "Hero headline contains 'India's first', 'Wing-in-Ground', 'cargo vehicle.'",
+    "Nav 'Capabilities' click smooth-scrolls to #capabilities",
+    "Tagline 'Fast as flight. Simple as boat.' present (footer)",
+    "info@wolfdynamics.in as mailto in Contact section + Footer (data-testids verified)",
+    "All 4 team members present: Ishaan Prakash, Jaishik Kotian, Kanakaraj (Air Marshal), Shaswat Sinha",
+    "Contact form empty submit shows client error toast and does NOT hit /api/contact",
+    "Contact form valid submit -> POST /api/contact 201, success toast 'Message received. We'll be in touch.', form fields cleared",
+    "Confidentiality scan: no rupee symbols, no INR/crore/lakh amounts, no CTC/salary, no LOI references, no cost-per-kg tables, no funding-round/series terms in rendered text"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "test_credentials": "N/A - no auth in app"
+}
