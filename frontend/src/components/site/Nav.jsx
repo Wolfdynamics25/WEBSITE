@@ -13,7 +13,7 @@ const Nav = () => {
     { href: "#capabilities", label: "Capabilities" },
     { href: "#applications", label: "Applications" },
     { href: "#impact", label: "Impact" },
-    { href: "#team", label: "Team" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -54,15 +54,6 @@ const Nav = () => {
             </a>
           ))}
         </nav>
-
-        <a
-          href="#contact"
-          data-testid="nav-cta-contact"
-          className="group relative inline-flex items-center gap-2 px-4 py-2 border border-cyan-accent/40 hover:border-cyan-accent hover:bg-cyan-accent/5 transition-colors duration-300"
-        >
-          <span className="w-1.5 h-1.5 bg-cyan-accent rounded-full animate-blink"></span>
-          <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-ocean-100">Contact</span>
-        </a>
       </div>
     </header>
   );

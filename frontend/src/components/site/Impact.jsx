@@ -23,7 +23,7 @@ const Impact = () => (
 
     <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
       <div className="max-w-3xl reveal">
-        <span className="eyebrow">05 · Impact</span>
+        <span className="eyebrow">04 · Impact</span>
         <h2 className="mt-4 font-serif text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
           Beyond a vehicle —
           <span className="block italic text-ocean-200">a coastal transport layer.</span>

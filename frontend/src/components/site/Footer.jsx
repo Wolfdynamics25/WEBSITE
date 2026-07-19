@@ -2,7 +2,7 @@ const Footer = () => (
   <footer data-testid="site-footer" className="relative border-t border-cyan-accent/10 bg-ocean-950">
     <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-        <div className="md:col-span-5">
+        <div className="md:col-span-7">
           <div className="flex items-center gap-3">
             <svg width="26" height="26" viewBox="0 0 40 40" fill="none" className="text-cyan-accent">
               <path d="M4 26 L20 12 L36 26" stroke="currentColor" strokeWidth="1.5" fill="none"/>
@@ -23,7 +23,7 @@ const Footer = () => (
           </p>
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-5">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-cyan-accent">Contact</span>
           <ul className="mt-4 space-y-2 text-ocean-200">
             <li>
@@ -37,18 +37,6 @@ const Footer = () => (
             </li>
             <li>Karnataka, India</li>
           </ul>
-        </div>
-
-        <div className="md:col-span-4">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-cyan-accent">Status</span>
-          <div className="mt-4 flex items-center gap-3">
-            <span className="w-1.5 h-1.5 bg-signal-orange rounded-full animate-blink" />
-            <span className="text-ocean-100">In Development · Launching Soon</span>
-          </div>
-          <p className="mt-4 text-ocean-200 text-sm leading-relaxed">
-            Currently engaged with a select set of investors, partners and operators.
-            Public updates will be shared here.
-          </p>
         </div>
       </div>
 

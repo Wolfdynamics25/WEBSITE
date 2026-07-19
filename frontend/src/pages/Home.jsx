@@ -4,9 +4,7 @@ import Hero from "@/components/site/Hero";
 import Narrative from "@/components/site/Narrative";
 import Capabilities from "@/components/site/Capabilities";
 import Applications from "@/components/site/Applications";
-import WhyNow from "@/components/site/WhyNow";
 import Impact from "@/components/site/Impact";
-import Team from "@/components/site/Team";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
@@ -35,9 +33,7 @@ const Home = () => {
         <Narrative />
         <Capabilities />
         <Applications />
-        <WhyNow />
         <Impact />
-        <Team />
         <Contact />
       </main>
       <Footer />
