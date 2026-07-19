@@ -21,24 +21,21 @@ const Nav = () => {
       data-testid="site-nav"
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
         scrolled
-          ? "bg-ocean-950/80 backdrop-blur-xl border-b border-cyan-accent/10"
+          ? "bg-tac-900/85 backdrop-blur-xl border-b border-tac-100/10"
           : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-        <a
-          href="#top"
-          data-testid="nav-logo"
-          className="flex items-center gap-3 group"
-        >
-          <svg width="26" height="26" viewBox="0 0 40 40" fill="none" className="text-cyan-accent">
-            <path d="M4 26 L20 12 L36 26" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-            <path d="M4 32 L36 32" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
-            <circle cx="20" cy="26" r="1.5" fill="currentColor"/>
+        <a href="#top" data-testid="nav-logo" className="flex items-center gap-3">
+          {/* Wolf-mark: sharp shield/wing motif */}
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" className="text-amber-warn">
+            <path d="M4 8 L20 4 L36 8 L36 20 L20 34 L4 20 Z" stroke="currentColor" strokeWidth="1.4" fill="none"/>
+            <path d="M12 18 L20 12 L28 18" stroke="currentColor" strokeWidth="1.2" fill="none"/>
+            <path d="M12 22 L28 22" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
           </svg>
-          <div className="flex flex-col leading-tight">
-            <span className="font-mono text-[10px] tracking-[0.24em] text-cyan-accent uppercase">Wolfdynamics</span>
-            <span className="font-serif text-sm text-ocean-100">Systems</span>
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-lg tracking-[0.02em] text-tac-100">WOLFDYNAMICS</span>
+            <span className="font-mono text-[9px] tracking-[0.32em] text-amber-warn mt-0.5">SYSTEMS · DEFENCE-GRADE</span>
           </div>
         </a>
 
@@ -48,7 +45,7 @@ const Nav = () => {
               key={l.href}
               href={l.href}
               data-testid={`nav-link-${l.label.toLowerCase()}`}
-              className="font-mono text-[11px] tracking-[0.2em] uppercase text-ocean-200 hover:text-cyan-accent transition-colors duration-300"
+              className="font-mono text-[10.5px] tracking-[0.24em] uppercase text-tac-200 hover:text-amber-warn transition-colors duration-300"
             >
               {l.label}
             </a>
