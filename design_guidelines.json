@@ -1,0 +1,150 @@
+{
+  "theme": "dark",
+  "project_vibe": "Aerospace/Defence-Tech meets Maritime/Blue-Economy. Cinematic, technical, mysterious but confident. 'Anduril/Shield AI' feel with telemetry-inspired UI details, deep canvas, and clean oceanic accents.",
+  "typography": {
+    "fonts": {
+      "headings": "'Instrument Serif', serif",
+      "body": "'Outfit', sans-serif",
+      "mono_accents": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl+ font-medium tracking-tight leading-none",
+      "h2": "text-3xl md:text-4xl font-medium tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed text-ocean-200",
+      "mono_label": "text-xs md:text-sm font-mono tracking-[0.2em] uppercase text-cyan-400"
+    },
+    "banned_fonts": ["Inter", "Roboto", "Space Grotesk", "Open Sans"]
+  },
+  "colors": {
+    "background": {
+      "default": "#060A11",
+      "surface": "#0C1420",
+      "glass": "rgba(12, 20, 32, 0.7)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#9BA8B8",
+      "tertiary": "#64748B"
+    },
+    "accent": {
+      "cyan": "#00E5FF",
+      "deep_teal": "#005E7A",
+      "foam": "#E2F1F8",
+      "alert_orange": "#FF6B35"
+    },
+    "border": "rgba(0, 229, 255, 0.15)"
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise overlay globally to add cinematic film-grain feel. Avoid plain flat black.",
+    "gradients": "Deep, localized radial glows (e.g., behind the hero heading or key capabilities) using deep teal to transparent.",
+    "shapes": "Use sharp corners (rounded-none or max rounded-sm) to maintain an aerospace/technical feel. Add 1px borders to sections to mimic telemetry panels."
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing (p-8 to p-24). High tension between packed technical data and wide cinematic breathing room.",
+    "grids": "Use 'Bento' or asymmetric grids for features. Expose the skeleton with 1px borders (border-collapse style) for the technical look.",
+    "containers": "Max-w-7xl for content, but allow abstract SVGs or background images to bleed full width."
+  },
+  "motion_and_interactions": {
+    "global": "Smooth scrolling (Lenis style). Staggered text reveals.",
+    "hover_states": "Technical hover: borders brighten, mono labels glitch or type out, subtle crosshair or bracket indicators appear around cards.",
+    "background_motion": "Slow, subtle CSS or SVG animation mimicking gentle waves or sweeping radar/horizon lines."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Technical, 1px stroke, cyan or white color.",
+    "usage": "Use icons sparingly; rely more on typography and SVG telemetry accents."
+  },
+  "components": {
+    "buttons": "Sharp edges, 1px solid border, transparent or glass background, text changes color or background fills on hover. Add a tiny mono label inside the button for extreme tech vibe.",
+    "cards": "Flat, 1px subtle border, no shadow by default. On hover: subtle shadow, border turns cyan, slight lift.",
+    "inputs": "Shadcn based, sharp edges, dark background, cyan focus ring.",
+    "data_testids": "MANDATORY on all buttons, forms, and interactive cards."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1613082852603-f4f1187885ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxkYXJrJTIwb2NlYW4lMjBob3Jpem9uJTIwdHdpbGlnaHR8ZW58MHx8fHwxNzg0NDQyNjQ3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark ocean horizon twilight, highly cinematic, use with heavy dark gradient overlay."
+    },
+    "abstract_waves": {
+      "url": "https://images.unsplash.com/photo-1655841439659-0afc60676b70?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGZsdWlkJTIwd2F2ZXMlMjBkYXJrJTIwYmx1ZXxlbnwwfHx8fDE3ODQ0NDI2NDd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark teal wavy abstract shapes, perfect for Capabilities or Impact sections."
+    },
+    "telemetry_tech": {
+      "url": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxhZXJvc3BhY2UlMjB0ZWxlbWV0cnklMjBhYnN0cmFjdHxlbnwwfHx8fDE3ODQ0NDI2NDd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Blue background with lines and dots, use for the 'Why Now' or 'Applications' data vibe."
+    },
+    "coastal_cargo": {
+      "url": "https://images.pexels.com/photos/16168037/pexels-photo-16168037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Top-down drone shot of an illuminated cargo ship docked at night. Good for Applications context."
+    }
+  },
+  "sections": [
+    {
+      "name": "Hero Teaser",
+      "content": "Tagline: 'India's first WIG cargo vehicle. Fast as Flight. Simple as Boat.' Add a pure SVG abstract WIG craft silhouette or telemetry crosshairs. Deep ocean image with heavy black overlay.",
+      "layout": "Centered, cinematic. Huge serif H1, monospace eyebrow text."
+    },
+    {
+      "name": "Narrative (Problem -> Solution)",
+      "content": "Coastal logistics gap leading to autonomous electric WIG.",
+      "layout": "Asymmetric text layout, left aligned with large typographic contrast."
+    },
+    {
+      "name": "Capabilities",
+      "content": "Ground Effect, Autonomy, Electric Propulsion, Runway-independent. 500-1000 kg payload class.",
+      "layout": "Bento grid or visible grid borders. Use telemetry style UI details (crosshairs, coordinate mockups in mono font)."
+    },
+    {
+      "name": "Applications Grid",
+      "content": "Coastal Cargo, Island Connectivity, Offshore Energy, Disaster Relief, Defence & Naval, Maritime Surveillance.",
+      "layout": "Dense technical grid (3 columns). Hover states reveal abstract imagery or cyan highlights."
+    },
+    {
+      "name": "Why Now",
+      "content": "Global WIG re-emergence + India's Sagarmala 2.0.",
+      "layout": "Editorial split layout. Serif heading on one side, dense technical text on the other."
+    },
+    {
+      "name": "Impact",
+      "content": "Blue Economy, SDGs, fishermen livelihoods, healthcare access.",
+      "layout": "Full width dark wave image background, staggered text cards over glassmorphism surfaces."
+    },
+    {
+      "name": "Team",
+      "content": "Ishaan Prakash, Jaishik Kotian, Air Marshal Kanakaraj (R), Shaswat Sinha (Names + 1-line roles). NO salaries/backgrounds.",
+      "layout": "Minimalist list, technical borders, no photos needed or use abstract placeholders."
+    },
+    {
+      "name": "Contact",
+      "content": "Form: Name, Email, Org, Interest (Dropdown), Message. Submits to info@wolfdynamics.in.",
+      "layout": "Clean, sharp Shadcn form wrapped in a technical 1px bordered container."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Build a single-page scrolling teaser in React using Tailwind CSS and Shadcn UI.",
+    "Do NOT use default Inter font. Use Instrument Serif for headings and JetBrains Mono for accents.",
+    "Use raw HTML/Tailwind for layouts and grids, rely on Shadcn only for form elements (inputs, selects, buttons).",
+    "Integrate Lucide React for icons.",
+    "Create custom SVG illustrations using code to represent the 'WIG craft silhouette' and telemetry data. Do not use emojis.",
+    "Add data-testid attributes to all form inputs, select triggers, and the submit button, e.g., data-testid='contact-name-input'.",
+    "Create a noise overlay effect using a fixed div with pointer-events-none and a repeating background image or SVG filter.",
+    "Use Framer Motion for scroll reveals and hover effects if possible, or standard Tailwind transitions.",
+    "Ensure the hero overlay is dark enough to make the white serif text completely legible (WCAG AA).",
+    "DO NOT reveal any financials, stage costs, competitor tables, or partner names. Only use provided public text."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable."
+  ]
+}
