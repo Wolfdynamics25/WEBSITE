@@ -165,7 +165,8 @@ async def login(payload: LoginRequest, request: Request, response: Response):
 
 
 @api.post("/auth/logout")
-async def logout(response: Response, user: dict = Depends(get_current_user)):
+async def logout(response: Response):
+    # Tolerant logout — always clear cookies even if the caller's token is expired.
     clear_auth_cookies(response)
     return {"status": "logged_out"}
 

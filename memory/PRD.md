@@ -1,30 +1,41 @@
-# Wolfdynamic Systems — EAGS Public Site
+# Wolfdynamic Systems — EAGS Site (with Auth)
 
 ## Original Problem Statement
-"Create a website for this without revealing confidential details" — user uploaded EAGS_brief_v8.pptx (investor deck for Wolfdynamic Systems Pvt. Ltd. building EAGS — India's first Wing-in-Ground effect autonomous cargo vehicle).
+"Create a website for this without revealing confidential details" — later expanded to include Email & Password authentication with a role-based portal.
 
-## User Choices (Latest)
-- Hide: all financials, roadmap capital, stage costs, competitor cost tables, LOI partner names (MEHAIR, Wow Ferries etc), team compensation & bios
-- Show: teaser + "launching soon"; India's first Wing-in-Ground effect vehicle for cargo; autonomy + electric
-- Design vibe: **Defence-tech / tactical** (dark charcoal, amber-warning + OD-green accents, Saira Condensed + Barlow + JetBrains Mono)
-- No contact form — just email (info@wolfdynamics.in)
-- Removed: co-founder cards (Team section), Why Now section, footer status
-- Use product renders + operations photos from the PPTX
+## Confirmed User Choices
+- Public teaser site + gated portal/admin (no confidential deck content on public pages)
+- **Design**: defence-tech (dark tactical charcoal + amber-warn + OD-green; Saira Condensed + Barlow + JetBrains Mono)
+- **Auth**: JWT email/password; roles `admin | investor | partner | team | pending`; invite-only + admin approval for self-signup
+- **Emergent Google Auth**: not yet wired (deferred to next iteration)
+- Contact form re-enabled; submissions land in admin dashboard
+- Real Wolfdynamics logo integrated
 
 ## Architecture
-- Frontend: React 19 + CRACO + Tailwind + shadcn/ui — dark defence-grade theme
-- Backend: FastAPI + MongoDB with contact endpoints (currently unused since form removed but retained for future re-enable)
-- Assets extracted from EAGS_brief_v8.pptx: /app/frontend/public/assets/{hero-render.jpg, ops-3.jpg, ops-4.jpg}
+- **Backend**: FastAPI + Motor(Mongo). `/app/backend/server.py` + `/app/backend/auth.py`
+  - JWT (HS256), bcrypt, httpOnly cookies (SameSite=None; Secure; Path=/)
+  - Brute-force protection (5 attempts → 15-min lockout)
+  - Startup: `ensure_indexes` + `seed_admin` (idempotent)
+- **Frontend**: React 19 + CRACO + Tailwind
+  - AuthContext + ProtectedRoute (three-state user: null|obj|false, role-gated)
+  - Pages: `/`, `/login`, `/register`, `/pending`, `/admin`, `/portal`
+- **DB collections**: `users`, `contact_inquiries`, `login_attempts`
 
-## Implemented (latest iteration)
-- Sections: Nav, Hero (with product render + tactical HUD overlays), Narrative, Capabilities (6 tactical cards), Applications (6 cards + FRP Pontoon Port ops photo), Impact (SDGs + outcomes + remote coastal deployment photo), Contact (email only), Footer
-- Removed: Team, Why Now, contact form, footer status
-- All confidential info excluded; no partner logos on site
-- Typography: Saira Condensed (display), Barlow (body), JetBrains Mono (labels)
-- Palette: tac-900 charcoal base, amber-warn (#E87722) primary accent, OD-green secondary
+## Implemented (Jan 2026)
+- Public site: Nav (with Sign In / Portal button), Hero (with real product render), Narrative, Capabilities, Applications, Impact (outcomes only, no SDGs), Contact (form + email), Footer (with real logo)
+- Auth flows: register → pending, admin approve → role-based access, login/logout/refresh, brute-force lockout
+- Admin dashboard: stats, Inquiries tab (mark-read), Users tab (approve/deactivate)
+- Portal: programme updates + documents card (role: admin/investor/partner/team)
+- Assets: real Wolfdynamics logo integrated (light-inverted for dark theme); product renders + ops photos from PPTX (no confidential specs)
+- Testing: 100% pass on backend + frontend (see `/app/test_reports/iteration_2.json`); pytest suite at `/app/backend/tests/test_auth_and_contact.py`
 
-## Backlog / Future
-- P1: Email delivery of any future inquiries via Resend/SendGrid — currently no form
-- P2: Press/media kit, careers page
-- P2: Loading animation, favicon/OG image
-- P2: Localisation (Hindi/Kannada)
+## Test Credentials (see `/app/memory/test_credentials.md`)
+- Admin: `admin@wolfdynamics.in` / `Wolf#EAGS-2026!`
+
+## Backlog
+- P1: **Emergent Google Auth** as second sign-in option (playbook already fetched)
+- P1: Email notifications on new inquiries + on user approval (SendGrid / Resend — needs API key)
+- P2: Password reset flow (forgot-password + reset-password)
+- P2: Real Capability Brief PDF upload + download for portal users
+- P2: OG image + favicon
+- P2: Tighten CORS_ORIGINS to explicit frontend URL for production
