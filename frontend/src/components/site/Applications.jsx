@@ -1,12 +1,12 @@
 import { Ship, MapPin, Factory, LifeBuoy, Crosshair, Radar } from "lucide-react";
 
 const apps = [
-  { icon: Ship, code: "APP · A1", title: "COASTAL CARGO", body: "Non-major to major port ferry lines. High-frequency medium-payload freight across working coasts." },
-  { icon: MapPin, code: "APP · A2", title: "ISLAND CONNECTIVITY", body: "Lakshadweep, Andaman & Nicobar and remote island communities. Faster, more frequent lifelines." },
-  { icon: Factory, code: "APP · A3", title: "OFFSHORE ENERGY", body: "Rapid crew spares, tools and time-critical logistics for offshore rigs and wind farms." },
-  { icon: LifeBuoy, code: "APP · A4", title: "DISASTER RELIEF", body: "Rapid coastal deployment when runways and roads are compromised — medical aid, essential supplies." },
-  { icon: Crosshair, code: "APP · A5", title: "DEFENCE & NAVAL LOGISTICS", body: "Low-signature, distributed autonomous logistics — ship-to-shore and ship-to-ship resupply." },
-  { icon: Radar, code: "APP · A6", title: "MARITIME SURVEILLANCE", body: "Persistent, low-altitude autonomous platform for coastal monitoring and environmental patrol." },
+  { icon: Ship, code: "APP · A1", title: "COASTAL CARGO" },
+  { icon: MapPin, code: "APP · A2", title: "ISLAND CONNECTIVITY" },
+  { icon: Factory, code: "APP · A3", title: "OFFSHORE ENERGY" },
+  { icon: LifeBuoy, code: "APP · A4", title: "DISASTER RELIEF" },
+  { icon: Crosshair, code: "APP · A5", title: "DEFENCE & NAVAL LOGISTICS" },
+  { icon: Radar, code: "APP · A6", title: "MARITIME SURVEILLANCE" },
 ];
 
 const Applications = () => (
@@ -17,14 +17,10 @@ const Applications = () => (
         <span className="h-px flex-1 max-w-32 bg-tac-100/15" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-14 reveal">
-        <h2 className="md:col-span-8 font-display text-tac-100 text-4xl md:text-5xl lg:text-[72px] leading-[1.02]">
+      <div className="mb-14 reveal">
+        <h2 className="font-display text-tac-100 text-4xl md:text-5xl lg:text-[72px] leading-[1.02] max-w-4xl">
           ONE PLATFORM. <span className="text-amber-warn">MANY MISSIONS.</span>
         </h2>
-        <p className="md:col-span-4 self-end text-tac-200 leading-[1.65]">
-          EAGS is a dual-use maritime mobility platform — designed from day one for both
-          civilian coastal logistics and strategic defence operations.
-        </p>
       </div>
 
       {/* Featured Ops image */}
@@ -53,14 +49,13 @@ const Applications = () => (
             <div
               key={a.title}
               data-testid={`application-${a.title.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-')}`}
-              className="relative border border-tac-100/12 p-8 group hover:border-amber-warn transition-colors duration-500 bg-tac-850"
+              className="relative border border-tac-100/12 p-8 md:p-10 group hover:border-amber-warn transition-colors duration-500 bg-tac-850 min-h-[200px] flex flex-col justify-between"
             >
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between">
                 <span className="mono-label" style={{ color: "#E87722" }}>{a.code}</span>
-                <Icon className="text-tac-100 group-hover:text-amber-warn transition-colors duration-300" size={18} strokeWidth={1.5} />
+                <Icon className="text-tac-100 group-hover:text-amber-warn transition-colors duration-300" size={20} strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-tac-100 text-xl md:text-2xl mb-3 leading-tight">{a.title}</h3>
-              <p className="text-tac-200 leading-[1.65] text-[14.5px]">{a.body}</p>
+              <h3 className="font-display text-tac-100 text-xl md:text-2xl leading-tight mt-8">{a.title}</h3>
               <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-amber-warn transition-[width] duration-700" />
             </div>
           );

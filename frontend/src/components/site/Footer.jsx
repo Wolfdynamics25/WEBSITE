@@ -1,7 +1,7 @@
 const Footer = () => (
   <footer data-testid="site-footer" className="relative border-t border-tac-100/10 bg-tac-950">
     <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
         <div className="md:col-span-7">
           <div className="flex items-center gap-3">
             <svg width="28" height="28" viewBox="0 0 40 40" fill="none" className="text-amber-warn">
@@ -16,10 +16,6 @@ const Footer = () => (
           </div>
           <p className="mt-8 font-display text-2xl md:text-3xl text-tac-100 max-w-md leading-tight">
             FAST AS FLIGHT. <span className="text-amber-warn">SIMPLE AS BOAT.</span>
-          </p>
-          <p className="mt-4 text-tac-300 text-sm max-w-md leading-[1.65]">
-            Building India's coastal logistics future — an autonomous, electric, ground-effect
-            maritime mobility platform.
           </p>
         </div>
 
@@ -42,7 +38,7 @@ const Footer = () => (
 
       <div className="mt-14 pt-6 border-t border-tac-100/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
         <span className="mono-label">© {new Date().getFullYear()} WOLFDYNAMIC SYSTEMS PVT. LTD.</span>
-        <span className="mono-label">MADE IN INDIA · BLUE ECONOMY · DUAL-USE</span>
+        <span className="mono-label">MADE IN INDIA · DUAL-USE</span>
       </div>
     </div>
   </footer>

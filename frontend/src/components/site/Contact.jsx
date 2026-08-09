@@ -3,7 +3,6 @@ import { Mail, MapPin } from "lucide-react";
 const Contact = () => {
   return (
     <section id="contact" data-testid="contact-section" className="relative py-28 md:py-40 border-t border-tac-100/10 overflow-hidden">
-      {/* Tactical grid backdrop */}
       <div className="absolute inset-0 tac-grid opacity-40 pointer-events-none" aria-hidden="true" />
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{
         background: "radial-gradient(700px 380px at 50% 50%, rgba(232, 119, 34, 0.08), transparent 70%)"
@@ -21,10 +20,6 @@ const Contact = () => {
               LET'S BUILD THE<br />
               <span className="text-amber-warn">COAST OF TOMORROW.</span>
             </h2>
-            <p className="mt-6 text-tac-200 leading-[1.65] max-w-md">
-              Investors, potential operators, defence partners and press — we would love to hear
-              from you. Reach out and we will respond personally.
-            </p>
           </div>
 
           <div className="md:col-span-6 reveal">
@@ -34,12 +29,12 @@ const Contact = () => {
               <span className="crosshair bl" />
               <span className="crosshair br" />
 
-              <div className="flex items-center gap-3 pb-5 mb-6 border-b border-tac-100/10">
+              <div className="flex items-center gap-3 pb-5 mb-8 border-b border-tac-100/10">
                 <span className="w-1.5 h-1.5 bg-amber-warn rounded-full animate-blink" />
                 <span className="mono-label" style={{ color: "#E87722" }}>SECURE CHANNEL · OPEN</span>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 <div>
                   <div className="mono-label mb-3 flex items-center gap-2">
                     <Mail size={12} strokeWidth={1.5} />
@@ -61,13 +56,6 @@ const Contact = () => {
                   </div>
                   <p className="font-display text-2xl md:text-3xl text-tac-100 leading-none">
                     KARNATAKA · INDIA
-                  </p>
-                </div>
-
-                <div className="pt-6 border-t border-tac-100/10">
-                  <p className="mono-label text-tac-300 leading-[1.7]" style={{ letterSpacing: "0.12em" }}>
-                    We respond within 48 hours to serious inquiries. All communication
-                    is treated as confidential.
                   </p>
                 </div>
               </div>

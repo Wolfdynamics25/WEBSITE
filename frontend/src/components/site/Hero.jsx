@@ -31,11 +31,13 @@ const Hero = () => {
             </h1>
           </div>
           <div className="md:col-span-4 md:pb-6 reveal">
-            <p data-testid="hero-subhead" className="text-tac-200 text-base md:text-lg leading-[1.55] max-w-md">
-              Autonomous. Electric. Runway-independent. A new maritime mobility class
-              engineered for the Indian coastline — <span className="text-tac-100 font-medium">fast as flight, simple as boat.</span>
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="border-l-2 border-amber-warn pl-5 mb-8">
+              <p className="font-display text-tac-100 text-xl md:text-2xl leading-tight">
+                FAST AS FLIGHT.<br />
+                <span className="text-amber-warn">SIMPLE AS BOAT.</span>
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
               <a
                 href="#contact"
                 data-testid="hero-cta-primary"
