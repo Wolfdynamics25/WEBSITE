@@ -3,16 +3,16 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
         <div className="md:col-span-7">
-          <div className="flex items-center gap-3">
-            <svg width="28" height="28" viewBox="0 0 40 40" fill="none" className="text-amber-warn">
-              <path d="M4 8 L20 4 L36 8 L36 20 L20 34 L4 20 Z" stroke="currentColor" strokeWidth="1.4" fill="none"/>
-              <path d="M12 18 L20 12 L28 18" stroke="currentColor" strokeWidth="1.2" fill="none"/>
-              <path d="M12 22 L28 22" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
-            </svg>
-            <div className="flex flex-col leading-none">
-              <span className="font-display text-xl tracking-[0.02em] text-tac-100">WOLFDYNAMICS SYSTEMS</span>
-              <span className="font-mono text-[9px] tracking-[0.32em] text-amber-warn mt-1">PVT. LTD. · DEFENCE-GRADE</span>
-            </div>
+          <div className="flex items-center gap-4">
+            <img
+              src="/assets/wolf-logo-light.png"
+              alt="Wolfdynamics Systems"
+              className="h-12 md:h-14 w-auto"
+            />
+            <span className="h-8 w-px bg-tac-100/25" />
+            <span className="font-mono text-[10px] tracking-[0.32em] uppercase text-amber-warn leading-tight">
+              Pvt. Ltd.<br/>Defence-Grade
+            </span>
           </div>
           <p className="mt-8 font-display text-2xl md:text-3xl text-tac-100 max-w-md leading-tight">
             FAST AS FLIGHT. <span className="text-amber-warn">SIMPLE AS BOAT.</span>

@@ -1,0 +1,30 @@
+{
+  "summary": "First auth-integration test pass for Wolfdynamic EAGS site. Backend: 13/13 pytest cases pass — health, admin login+cookies, wrong-password 401, /auth/me, logout, brute-force 429 on 6th, register (pending + cookies), duplicate 409, short-password 422, pending user portal 403, admin list users, approve→role change→login→portal 200, deactivate + self-deactivate 400, contact create (public), invalid email 4xx, unauth GET 401, admin GET list newest-first, mark-read as admin, mark-read as non-admin 403. Frontend: home shows required hero copy (INDIA'S FIRST / WING-IN-GROUND / CARGO VEHICLE.), nav-signin present, contact form submits and clears, /login redirects admin to /admin, admin dashboard shows inquiries and users tables (admin user visible), /register (logged out) creates pending user and redirects to /pending, pending user is blocked from /admin and /portal (both redirect to /pending), pending-logout works, logged-out /admin redirects to /login, admin sign-out clears session. Confidentiality check clean: no MEHAIR/Wow Ferries/rupee amounts/LOI names on public pages.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_auth_and_contact.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "auth.py seed_admin uses env ADMIN_PASSWORD default 'admin123' as fallback — fine because .env sets it, but a missing env var would silently seed a weak password. Consider raising if ADMIN_PASSWORD is unset.",
+    "CORS_ORIGINS='*' combined with allow_credentials=True is invalid per spec; browsers may reject credentialed requests. Currently works because backend echoes '*' but for production set an explicit origin list. Recommend main agent tighten CORS_ORIGINS to the frontend URL.",
+    "server.py: /auth/logout requires auth (Depends get_current_user) — if a user's token has already expired, they get 401 on logout instead of a graceful cookie-clear. Consider making logout tolerant of unauthenticated calls.",
+    "sanitize_user is called on some already-projected docs (password_hash excluded at query) — harmless duplication but keeps behavior consistent."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_auth_and_contact.py (new)"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "test_credentials": "Admin admin@wolfdynamics.in / Wolf#EAGS-2026! (works). Fresh test users created via /api/auth/register with TEST_ prefix.",
+  "seed_data_creation": "Multiple TEST_-prefixed users created via /api/auth/register (approve/deactivate/portal/pending). Several TEST_ contact inquiries created and one marked read.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend suite lives at /app/backend/tests/test_auth_and_contact.py — reuse for regression. Admin auth uses httpOnly cookies (SameSite=None; Secure); requests.Session handles them automatically. Brute-force test consumes an email; use fresh emails per run (helper _fresh_email). Contact endpoint is /api/contact (not /api/contact/inquiries). Data-testids on all critical UI verified working. Emergent Google Auth is NOT implemented — do not test.",
+  "rca of the issue": "No blocking issues found."
+}

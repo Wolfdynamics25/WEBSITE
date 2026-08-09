@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { LogIn, LayoutDashboard } from "lucide-react";
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -16,6 +20,14 @@ const Nav = () => {
     { href: "#contact", label: "Contact" },
   ];
 
+  const portalDest = user && user.role === "admin"
+    ? "/admin"
+    : user && user.role && user.role !== "pending"
+    ? "/portal"
+    : user && user.role === "pending"
+    ? "/pending"
+    : null;
+
   return (
     <header
       data-testid="site-nav"
@@ -27,16 +39,13 @@ const Nav = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <a href="#top" data-testid="nav-logo" className="flex items-center gap-3">
-          {/* Wolf-mark: sharp shield/wing motif */}
-          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" className="text-amber-warn">
-            <path d="M4 8 L20 4 L36 8 L36 20 L20 34 L4 20 Z" stroke="currentColor" strokeWidth="1.4" fill="none"/>
-            <path d="M12 18 L20 12 L28 18" stroke="currentColor" strokeWidth="1.2" fill="none"/>
-            <path d="M12 22 L28 22" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
-          </svg>
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-lg tracking-[0.02em] text-tac-100">WOLFDYNAMICS</span>
-            <span className="font-mono text-[9px] tracking-[0.32em] text-amber-warn mt-0.5">SYSTEMS · DEFENCE-GRADE</span>
-          </div>
+          <img
+            src="/assets/wolf-logo-light.png"
+            alt="Wolfdynamics Systems"
+            className="h-9 md:h-10 w-auto"
+          />
+          <span className="hidden sm:inline-block h-4 w-px bg-tac-100/25" />
+          <span className="hidden sm:inline-block font-mono text-[9px] tracking-[0.32em] uppercase text-amber-warn">Systems · Defence-Grade</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -50,6 +59,25 @@ const Nav = () => {
               {l.label}
             </a>
           ))}
+          {portalDest ? (
+            <Link
+              to={portalDest}
+              data-testid="nav-portal"
+              className="inline-flex items-center gap-2 px-3 py-2 border border-amber-warn/50 text-amber-warn hover:bg-amber-warn hover:text-tac-900 font-mono text-[10.5px] tracking-[0.22em] uppercase transition-colors duration-300"
+            >
+              <LayoutDashboard size={12} strokeWidth={1.5} />
+              <span>{user.role === "admin" ? "Admin" : user.role === "pending" ? "Status" : "Portal"}</span>
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              data-testid="nav-signin"
+              className="inline-flex items-center gap-2 px-3 py-2 border border-tac-100/25 hover:border-amber-warn hover:text-amber-warn font-mono text-[10.5px] tracking-[0.22em] uppercase transition-colors duration-300"
+            >
+              <LogIn size={12} strokeWidth={1.5} />
+              <span>Sign in</span>
+            </Link>
+          )}
         </nav>
       </div>
     </header>
