@@ -25,7 +25,7 @@ const Applications = () => (
 
       {/* Featured Ops image */}
       <div className="relative mb-12 reveal">
-        <div className="absolute -top-6 left-0 mono-label" style={{ color: "#E87722" }}>FIG. 02 · FRP PONTOON PORT · CARGO OPS</div>
+        <div className="absolute -top-6 left-0 mono-label" style={{ color: "#4F8BE0" }}>FIG. 02 · FRP PONTOON PORT · CARGO OPS</div>
         <div className="absolute -top-6 right-0 mono-label">CONFIG · UNMANNED · 500 KG</div>
         <div className="relative overflow-hidden bg-tac-800 aspect-[16/9] md:aspect-[21/8]">
           <img
@@ -52,7 +52,7 @@ const Applications = () => (
               className="relative border border-tac-100/12 p-8 md:p-10 group hover:border-amber-warn transition-colors duration-500 bg-tac-850 min-h-[200px] flex flex-col justify-between"
             >
               <div className="flex items-center justify-between">
-                <span className="mono-label" style={{ color: "#E87722" }}>{a.code}</span>
+                <span className="mono-label" style={{ color: "#4F8BE0" }}>{a.code}</span>
                 <Icon className="text-tac-100 group-hover:text-amber-warn transition-colors duration-300" size={20} strokeWidth={1.5} />
               </div>
               <h3 className="font-display text-tac-100 text-xl md:text-2xl leading-tight mt-8">{a.title}</h3>

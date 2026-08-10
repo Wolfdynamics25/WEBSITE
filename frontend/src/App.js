@@ -53,7 +53,7 @@ function App() {
         toastOptions={{
           style: {
             background: "#131817",
-            border: "1px solid rgba(232, 119, 34, 0.35)",
+            border: "1px solid rgba(79, 139, 224, 0.35)",
             color: "#E8E4D8",
             borderRadius: "2px",
             fontFamily: "'Barlow', sans-serif",

@@ -6,7 +6,7 @@ const Hero = () => {
 
       {/* radial glow */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{
-        background: "radial-gradient(900px 400px at 70% 20%, rgba(232, 119, 34, 0.10), transparent 60%), radial-gradient(700px 400px at 20% 80%, rgba(122, 139, 71, 0.08), transparent 60%)"
+        background: "radial-gradient(900px 400px at 70% 20%, rgba(79, 139, 224, 0.10), transparent 60%), radial-gradient(700px 400px at 20% 80%, rgba(143, 166, 199, 0.08), transparent 60%)"
       }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
@@ -61,7 +61,7 @@ const Hero = () => {
 
         {/* Product image */}
         <div className="mt-14 md:mt-20 relative reveal">
-          <div className="absolute -top-6 left-0 mono-label" style={{ color: "#E87722" }}>FIG. 01 · EAGS · SEA TRIAL RENDER</div>
+          <div className="absolute -top-6 left-0 mono-label" style={{ color: "#4F8BE0" }}>FIG. 01 · EAGS · SEA TRIAL RENDER</div>
           <div className="absolute -top-6 right-0 mono-label">TIMESTAMP · REV. 08</div>
 
           <div className="relative overflow-hidden bg-tac-800 aspect-[21/9]">
@@ -105,7 +105,7 @@ const Hero = () => {
             { l: "Infra", v: "RUNWAY-INDEPENDENT" },
           ].map((s, i) => (
             <div key={s.l} className={`p-6 md:p-8 ${i > 0 ? "md:border-l md:border-tac-100/12" : ""} ${i > 1 ? "border-t md:border-t-0 border-tac-100/12" : ""} ${i === 1 ? "border-t md:border-t-0 border-tac-100/12" : ""}`}>
-              <div className="mono-label mb-2" style={{ color: "#E87722" }}>{`SPEC · 0${i + 1}`}</div>
+              <div className="mono-label mb-2" style={{ color: "#4F8BE0" }}>{`SPEC · 0${i + 1}`}</div>
               <div className="mono-label mb-3">{s.l}</div>
               <div className="font-display text-2xl md:text-3xl text-tac-100 leading-none">{s.v}</div>
             </div>

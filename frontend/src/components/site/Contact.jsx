@@ -59,7 +59,7 @@ const Contact = () => {
     <section id="contact" data-testid="contact-section" className="relative py-28 md:py-40 border-t border-tac-100/10 overflow-hidden">
       <div className="absolute inset-0 tac-grid opacity-40 pointer-events-none" aria-hidden="true" />
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{
-        background: "radial-gradient(700px 380px at 50% 50%, rgba(232, 119, 34, 0.08), transparent 70%)"
+        background: "radial-gradient(700px 380px at 50% 50%, rgba(79, 139, 224, 0.08), transparent 70%)"
       }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
@@ -114,7 +114,7 @@ const Contact = () => {
 
               <div className="flex items-center gap-3 pb-4 border-b border-tac-100/10 mb-4">
                 <span className="w-1.5 h-1.5 bg-amber-warn rounded-full animate-blink" />
-                <span className="mono-label" style={{ color: "#E87722" }}>SECURE CHANNEL · OPEN</span>
+                <span className="mono-label" style={{ color: "#4F8BE0" }}>SECURE CHANNEL · OPEN</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

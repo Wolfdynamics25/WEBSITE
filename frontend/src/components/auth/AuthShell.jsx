@@ -5,7 +5,7 @@ const AuthShell = ({ title, subtitle, children, footer }) => (
     <div className="grain-overlay" aria-hidden="true" />
     <div className="absolute inset-0 tac-grid opacity-40 pointer-events-none" aria-hidden="true" />
     <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{
-      background: "radial-gradient(600px 340px at 25% 25%, rgba(232, 119, 34, 0.10), transparent 60%), radial-gradient(600px 340px at 80% 80%, rgba(122, 139, 71, 0.08), transparent 60%)"
+      background: "radial-gradient(600px 340px at 25% 25%, rgba(79, 139, 224, 0.10), transparent 60%), radial-gradient(600px 340px at 80% 80%, rgba(143, 166, 199, 0.08), transparent 60%)"
     }} />
 
     <div className="relative max-w-md mx-auto px-6 pt-16 pb-24">
@@ -23,7 +23,7 @@ const AuthShell = ({ title, subtitle, children, footer }) => (
 
         <div className="flex items-center gap-3 pb-5 mb-8 border-b border-tac-100/10">
           <span className="w-1.5 h-1.5 bg-amber-warn rounded-full animate-blink" />
-          <span className="mono-label" style={{ color: "#E87722" }}>{subtitle}</span>
+          <span className="mono-label" style={{ color: "#4F8BE0" }}>{subtitle}</span>
         </div>
 
         <h1 className="font-display text-tac-100 text-3xl md:text-4xl leading-[1.02] mb-8">

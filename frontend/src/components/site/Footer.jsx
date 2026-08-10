@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
 
         <div className="md:col-span-5">
-          <span className="mono-label" style={{ color: "#E87722" }}>CONTACT</span>
+          <span className="mono-label" style={{ color: "#4F8BE0" }}>CONTACT</span>
           <ul className="mt-4 space-y-3">
             <li>
               <a

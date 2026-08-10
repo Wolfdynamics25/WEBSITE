@@ -46,32 +46,35 @@ module.exports = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        // Tactical / Defence palette
+        // ---- Grey / Navy Blue palette (rebranded) ----
+        // Kept `tac-*` alias so no component rewrites needed. tac-900 is bg base.
         tac: {
-          950: '#050706',
-          900: '#0A0E0C',
-          850: '#0F1412',
-          800: '#131817',
-          700: '#1B211F',
-          600: '#242A28',
-          500: '#3A423F',
-          400: '#5A6360',
-          300: '#8B9088',
-          200: '#B9BEB8',
-          100: '#E8E4D8',   // tactical bone / warm white
+          950: '#03071A',   // deepest, for footer / pure black feel
+          900: '#061024',   // main bg
+          850: '#0B172E',   // section alt bg
+          800: '#0F1E3A',   // surface
+          700: '#152847',
+          600: '#1E355C',
+          500: '#2B4573',
+          400: '#516B93',
+          300: '#8290A6',   // muted text
+          200: '#B4BFD1',   // secondary text
+          100: '#E7ECF3',   // primary text (near-white with cool tint)
         },
+        // `amber-*` alias is now steel-blue (primary accent). Keeping the class names avoids a mass rewrite.
         amber: {
-          warn: '#E87722',   // safety amber
-          hot:  '#F49B4C',
-          dim:  '#7A3F14',
+          warn: '#4F8BE0',   // steel blue primary accent
+          hot:  '#6EA0EE',   // hover
+          dim:  '#25406B',   // subtle dark blue
         },
+        // `od-green` alias is now a soft steel-grey (secondary highlight)
         od: {
-          green: '#7A8B47',   // OD / olive drab highlight
-          dark:  '#4A5D23',
-          fade:  '#2D3818',
+          green: '#8FA6C7',
+          dark:  '#4B617F',
+          fade:  '#243044',
         },
         signal: {
-          red: '#C13B2A',
+          red: '#C74B4B',    // kept for error states
         },
       },
       borderRadius: {

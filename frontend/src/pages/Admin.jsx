@@ -85,19 +85,19 @@ const Admin = () => {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <div className="border border-tac-100/12 p-6 bg-tac-850">
-          <div className="mono-label" style={{ color: "#E87722" }}>INQUIRIES · TOTAL</div>
+          <div className="mono-label" style={{ color: "#4F8BE0" }}>INQUIRIES · TOTAL</div>
           <div className="font-display text-3xl text-tac-100 mt-3">{inquiries.length}</div>
         </div>
         <div className="border border-tac-100/12 p-6 bg-tac-850">
-          <div className="mono-label" style={{ color: "#E87722" }}>UNREAD</div>
+          <div className="mono-label" style={{ color: "#4F8BE0" }}>UNREAD</div>
           <div className="font-display text-3xl text-tac-100 mt-3">{unread}</div>
         </div>
         <div className="border border-tac-100/12 p-6 bg-tac-850">
-          <div className="mono-label" style={{ color: "#E87722" }}>USERS · TOTAL</div>
+          <div className="mono-label" style={{ color: "#4F8BE0" }}>USERS · TOTAL</div>
           <div className="font-display text-3xl text-tac-100 mt-3">{users.length}</div>
         </div>
         <div className="border border-tac-100/12 p-6 bg-tac-850">
-          <div className="mono-label" style={{ color: "#E87722" }}>PENDING APPROVAL</div>
+          <div className="mono-label" style={{ color: "#4F8BE0" }}>PENDING APPROVAL</div>
           <div className="font-display text-3xl text-signal-red mt-3">{pending}</div>
         </div>
       </div>

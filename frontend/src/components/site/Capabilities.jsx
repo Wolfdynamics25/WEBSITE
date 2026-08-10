@@ -39,7 +39,7 @@ const Capabilities = () => (
 
               <div className="flex items-center justify-between">
                 <Icon className="text-amber-warn" size={24} strokeWidth={1.5} />
-                <span className="mono-label" style={{ color: "#E87722" }}>{c.tag}</span>
+                <span className="mono-label" style={{ color: "#4F8BE0" }}>{c.tag}</span>
               </div>
               <h3 className="font-display text-tac-100 text-2xl md:text-3xl leading-none mt-8">{c.title}</h3>
             </div>

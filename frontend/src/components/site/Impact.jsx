@@ -22,7 +22,7 @@ const Impact = () => (
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 reveal">
         <div className="lg:col-span-7 relative">
-          <div className="absolute -top-6 left-0 mono-label" style={{ color: "#E87722" }}>FIG. 03 · REMOTE COASTAL DEPLOYMENT</div>
+          <div className="absolute -top-6 left-0 mono-label" style={{ color: "#4F8BE0" }}>FIG. 03 · REMOTE COASTAL DEPLOYMENT</div>
           <div className="relative overflow-hidden bg-tac-800 aspect-[4/3]">
             <img
               src="/assets/ops-4.jpg"
@@ -41,7 +41,7 @@ const Impact = () => (
           {outcomes.map((o, i) => (
             <div key={o.k} className="px-6 py-6 md:py-7" data-testid={`impact-outcome-${i}`}>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="mono-label" style={{ color: "#E87722" }}>{String(i + 1).padStart(2, "0")}</span>
+                <span className="mono-label" style={{ color: "#4F8BE0" }}>{String(i + 1).padStart(2, "0")}</span>
                 <span className="mono-label">{o.k}</span>
               </div>
               <p className="font-display text-tac-100 text-xl md:text-2xl leading-tight">{o.v}</p>

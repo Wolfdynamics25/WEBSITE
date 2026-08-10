@@ -36,7 +36,7 @@ const Portal = () => {
               <div key={u.id} data-testid={`update-${u.id}`} className="border border-tac-100/12 bg-tac-850 p-6 md:p-8 group hover:border-amber-warn transition-colors">
                 <div className="flex items-center gap-3 mb-3">
                   <Calendar size={12} strokeWidth={1.5} className="text-amber-warn" />
-                  <span className="mono-label" style={{ color: "#E87722" }}>{u.date}</span>
+                  <span className="mono-label" style={{ color: "#4F8BE0" }}>{u.date}</span>
                 </div>
                 <h3 className="font-display text-tac-100 text-2xl md:text-3xl leading-tight mb-3">{u.title}</h3>
                 <p className="text-tac-200 leading-[1.65]">{u.summary}</p>
@@ -46,7 +46,7 @@ const Portal = () => {
 
           <div className="lg:col-span-4 space-y-4">
             <div className="border border-tac-100/12 bg-tac-850 p-6">
-              <span className="mono-label" style={{ color: "#E87722" }}>DOCUMENTS</span>
+              <span className="mono-label" style={{ color: "#4F8BE0" }}>DOCUMENTS</span>
               <ul className="mt-4 space-y-3" data-testid="portal-documents">
                 {data.documents.map((d) => (
                   <li key={d.id} className="flex items-start gap-3">
@@ -63,7 +63,7 @@ const Portal = () => {
             </div>
 
             <div className="border border-tac-100/12 bg-tac-850 p-6">
-              <span className="mono-label" style={{ color: "#E87722" }}>NEED SOMETHING SPECIFIC?</span>
+              <span className="mono-label" style={{ color: "#4F8BE0" }}>NEED SOMETHING SPECIFIC?</span>
               <p className="mt-3 text-tac-200 text-sm leading-[1.65]">
                 Reach us directly for detailed briefings, references and technical Q&amp;A.
               </p>
