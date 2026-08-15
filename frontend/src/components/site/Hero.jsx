@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="md:col-span-8 reveal">
             <h1 data-testid="hero-headline" className="font-display text-tac-100 text-[46px] leading-[0.92] sm:text-6xl md:text-[86px] lg:text-[120px] tracking-[-0.005em]">
               INDIA'S FIRST
-              <span className="block text-amber-warn">WING-IN-GROUND</span>
+              <span className="block text-amber-warn">UNMANNED WING-IN-GROUND</span>
               <span className="block">CARGO VEHICLE.</span>
             </h1>
           </div>

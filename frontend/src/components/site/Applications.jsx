@@ -13,7 +13,7 @@ const Applications = () => (
   <section id="applications" data-testid="applications-section" className="relative py-28 md:py-40 border-t border-tac-100/10 overflow-hidden">
     <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
       <div className="flex items-center gap-4 mb-12">
-        <span className="eyebrow">§ 03 · Applications</span>
+        <span className="eyebrow">§ 04 · Applications</span>
         <span className="h-px flex-1 max-w-32 bg-tac-100/15" />
       </div>
 
@@ -49,13 +49,13 @@ const Applications = () => (
             <div
               key={a.title}
               data-testid={`application-${a.title.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-')}`}
-              className="relative border border-tac-100/12 p-8 md:p-10 group hover:border-amber-warn transition-colors duration-500 bg-tac-850 min-h-[200px] flex flex-col justify-between"
+              className="relative border border-tac-100/12 px-6 py-5 md:px-7 md:py-6 group hover:border-amber-warn transition-colors duration-500 bg-tac-850 flex flex-col justify-between gap-4"
             >
               <div className="flex items-center justify-between">
                 <span className="mono-label" style={{ color: "#4F8BE0" }}>{a.code}</span>
                 <Icon className="text-tac-100 group-hover:text-amber-warn transition-colors duration-300" size={20} strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-tac-100 text-xl md:text-2xl leading-tight mt-8">{a.title}</h3>
+              <h3 className="font-display text-tac-100 text-xl md:text-2xl leading-tight">{a.title}</h3>
               <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-amber-warn transition-[width] duration-700" />
             </div>
           );

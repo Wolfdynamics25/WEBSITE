@@ -4,6 +4,7 @@ import Hero from "@/components/site/Hero";
 import Narrative from "@/components/site/Narrative";
 import Capabilities from "@/components/site/Capabilities";
 import Applications from "@/components/site/Applications";
+import Products from "@/components/site/Products";
 import Impact from "@/components/site/Impact";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
@@ -32,6 +33,7 @@ const Home = () => {
         <Hero />
         <Narrative />
         <Capabilities />
+        <Products />
         <Applications />
         <Impact />
         <Contact />

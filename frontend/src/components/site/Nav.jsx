@@ -15,6 +15,7 @@ const Nav = () => {
 
   const links = [
     { href: "#capabilities", label: "Capabilities" },
+    { href: "#products", label: "Products" },
     { href: "#applications", label: "Applications" },
     { href: "#impact", label: "Impact" },
     { href: "#contact", label: "Contact" },

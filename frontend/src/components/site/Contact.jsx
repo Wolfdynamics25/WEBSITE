@@ -64,7 +64,7 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
         <div className="flex items-center gap-4 mb-12">
-          <span className="eyebrow">§ 05 · Contact</span>
+          <span className="eyebrow">§ 06 · Contact</span>
           <span className="h-px flex-1 max-w-32 bg-tac-100/15" />
         </div>
 

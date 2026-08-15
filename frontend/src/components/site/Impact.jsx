@@ -2,7 +2,7 @@ const Impact = () => (
   <section id="impact" data-testid="impact-section" className="relative py-28 md:py-40 border-t border-tac-100/10 bg-tac-850 overflow-hidden">
     <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
       <div className="flex items-center gap-4 mb-12">
-        <span className="eyebrow">§ 04 · Impact</span>
+        <span className="eyebrow">§ 05 · Impact</span>
         <span className="h-px flex-1 max-w-32 bg-tac-100/15" />
       </div>
 
